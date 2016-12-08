@@ -33,6 +33,6 @@ app.post("/wizard", (req, res) =>   {
         Morality: req.body.morality
     },'*').then((data)=> {
         console.log("yay!")
-        res.json(data[0])
+        res.json(data)
     }) 
 })
