@@ -5,13 +5,13 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: process.env.DATABASE_URL || "development"
+    connection: process.env.LOCAL_DATABASE_URL
     
   },
 
   production: {
     client: 'postgresql',
-    connection: process.env.DEPLOYED_DATABASE_URL || "production"
+    connection: process.env.DATABASE_URL + "?ssl=true"
   }
 
 }
